@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2428bc9b446678141b15545e45551790, type: 3}
@@ -60,4 +61,29 @@ PrefabInstance:
       value: carrot_001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2428bc9b446678141b15545e45551790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 780794346336525757}
   m_SourcePrefab: {fileID: 100100000, guid: 2428bc9b446678141b15545e45551790, type: 3}
+--- !u!1 &7218910709563869464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2428bc9b446678141b15545e45551790, type: 3}
+  m_PrefabInstance: {fileID: 7561491938811868233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780794346336525757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218910709563869464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7fa28b7794f094ca5efb4849b97fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Carrot
+  itemIcon: {fileID: 0}

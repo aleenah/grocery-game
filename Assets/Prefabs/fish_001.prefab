@@ -66,14 +66,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3164846270240101268}
+      addedObject: {fileID: 7826121399003748219}
   m_SourcePrefab: {fileID: 100100000, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
 --- !u!1 &6765674851212242868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
   m_PrefabInstance: {fileID: 5847335601338159845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-3164846270240101268
+--- !u!114 &7826121399003748219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,5 +85,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7fa28b7794f094ca5efb4849b97fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Half fish
+  itemName: Cut Fish
   itemIcon: {fileID: 0}
