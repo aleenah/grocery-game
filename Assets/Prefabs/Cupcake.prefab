@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7941357157759702859}
   m_Layer: 0
   m_Name: Cupcake
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cupcake
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 3bc94fef396c3084cba28eeb83f76c38, type: 3}

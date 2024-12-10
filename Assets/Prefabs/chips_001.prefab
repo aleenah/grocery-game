@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chips_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfa69215c106c624f9bbd20882758a79, type: 3}
+      propertyPath: m_TagString
+      value: GroceryItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfa69215c106c624f9bbd20882758a79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4199404597913407975}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfa69215c106c624f9bbd20882758a79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8031194308597026355}
   m_SourcePrefab: {fileID: 100100000, guid: bfa69215c106c624f9bbd20882758a79, type: 3}
 --- !u!1 &5723697036167094182 stripped
 GameObject:
@@ -86,4 +93,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Chips
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 15d72b18bea6c014b84806cac003adaf, type: 3}
+--- !u!65 &-8031194308597026355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5723697036167094182}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.080913134, y: 0.23158573, z: 0.0809135}
+  m_Center: {x: 0.0010750517, y: 0.11585783, z: -0.01283122}

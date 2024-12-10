@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7493190359961384917}
   m_Layer: 0
   m_Name: Pear
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Pear
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 5f32e30bcdb72ad41a7846879491657a, type: 3}

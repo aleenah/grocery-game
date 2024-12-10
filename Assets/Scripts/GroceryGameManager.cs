@@ -1,24 +1,61 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 
 public class GroceryGameManager : MonoBehaviour
 {
-    public List<GameObject> groceryItemPrefabs; // Prefabs of grocery items
-    public List<Transform> spawnPoints; // Spawn points for items
-    public int minItemsPerType = 1; // Minimum items per type
-    public int maxItemsPerType = 5; // Maximum items per type
-    public int itemsToCollect = 5; // Number of items to collect for the grocery list
+    public List<GameObject> groceryItemPrefabs; 
+    public List<Transform> spawnPoints; 
+    public int minItemsPerType = 1; 
+    public int maxItemsPerType = 5; 
+    public int startingItemsToCollect = 5; 
+    public int itemsIncrement = 2;
+    public int levels = 3;
 
-    public GameObject groceryUIPrefab; // Prefab for a single grocery list UI item
-    public GameObject groceryListPanel; // The panel where the grocery list UI items will appear
+    public GameObject groceryUIPrefab; 
+    public GameObject groceryListPanel; 
 
-    public List<string> groceryList = new List<string>(); // The list of grocery item names to collect
+    private int currentLevel = 1;
+    private int itemsToCollect;
 
-    void Start()
+    public TMP_Text levelText;
+
+    public List<string> groceryList = new List<string>(); 
+
+    void Start() 
     {
+        UpdateLevelText();
+        itemsToCollect = startingItemsToCollect;
+        StartLevel();
+    }
+
+    void StartLevel()
+    {
+        UpdateLevelText();
+        ClearExistingItems();
         GenerateGroceryItems();
         GenerateGroceryList();
+    }
+
+    void UpdateLevelText()
+    {
+    levelText.text = "Level: " + currentLevel;
+    }
+
+    void ClearExistingItems()
+    {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("GroceryItem"))
+        {
+            Destroy(item);
+        }
+
+        foreach (Transform child in groceryListPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        groceryList.Clear();
     }
 
     void GenerateGroceryItems()
@@ -48,7 +85,6 @@ public class GroceryGameManager : MonoBehaviour
 
     void GenerateGroceryList()
     {
-        // Randomly select items for the grocery list
         List<GameObject> shuffledItems = groceryItemPrefabs.OrderBy(_ => Random.value).ToList();
 
         for (int i = 0; i < Mathf.Min(itemsToCollect, shuffledItems.Count); i++)
@@ -58,10 +94,24 @@ public class GroceryGameManager : MonoBehaviour
             {
                 groceryList.Add(itemComponent.itemName);
 
-                // Create a UI element for this item
                 GameObject uiElement = Instantiate(groceryUIPrefab, groceryListPanel.transform);
                 GroceryUI groceryUI = uiElement.GetComponent<GroceryUI>();
                 groceryUI.Setup(itemComponent.itemName, itemComponent.itemIcon);
+            }
+        }
+    }
+
+    public void CheckWinCondition()
+    {
+        if (groceryList.Count == 0)
+        {
+            if (currentLevel < levels)
+            {
+                currentLevel++;
+                itemsToCollect += itemsIncrement;
+                StartLevel();
+            } else {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Win");
             }
         }
     }

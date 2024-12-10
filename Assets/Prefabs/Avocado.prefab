@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2461414434509156110}
   m_Layer: 0
   m_Name: Avocado
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Avocado
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 89cc0ec6705b17d44a6acce8ce6604a2, type: 3}

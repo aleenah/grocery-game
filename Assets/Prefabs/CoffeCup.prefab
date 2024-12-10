@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6159075867023657720}
   m_Layer: 0
   m_Name: CoffeCup
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Coffee
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 1ec4e4e21dde3644fb25f9c0cef79bc1, type: 3}

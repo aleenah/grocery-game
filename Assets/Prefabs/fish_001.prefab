@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
+      propertyPath: m_TagString
+      value: GroceryItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7826121399003748219}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4334094360682866006}
   m_SourcePrefab: {fileID: 100100000, guid: cc9555660233b1f4c8e9da5c66a9dab1, type: 3}
 --- !u!1 &6765674851212242868 stripped
 GameObject:
@@ -86,4 +93,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cut Fish
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 0a60b795ba0d67d4b9acab6247ed1b33, type: 3}
+--- !u!65 &-4334094360682866006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765674851212242868}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09736529, y: 0.055519518, z: 0.2750896}
+  m_Center: {x: -0.002203362, y: 0.026028281, z: -0.014514595}

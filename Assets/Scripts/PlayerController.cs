@@ -1,32 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Movement speed
-    public float lookSpeed = 3f; // Look sensitivity
-    public float interactionRange = 6f; // Range for interacting with items
-    public KeyCode pickupKey = KeyCode.E; // Key to pick up items
-    public Camera playerCamera; // Reference to the player's camera
-    public GameObject crosshair; // Crosshair for aiming
-    public GroceryGameManager gameManager; // Reference to the game manager
+    public float moveSpeed = 5f; 
+    public float lookSpeed = 3f; 
+    public float interactionRange = 6f; 
+    public KeyCode pickupKey = KeyCode.E; 
+    public Camera playerCamera; 
+    public GameObject crosshair; 
+    public GroceryGameManager gameManager; 
     public Sprite defaultCrosshairColor;
     public Sprite interactableCrosshairColor; 
 
     private Rigidbody rb;
-    private GameObject targetItem; // Current item in view
-    private Image crosshairImage; // Crosshair image component for color change
+    private GameObject targetItem; 
+    private Image crosshairImage; 
+
+    public TMP_Text timeText;
+    public float timeLeft = 120;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the game window
-        Cursor.visible = false; // Hide the cursor
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false; 
         
-        // Get the Image component from the crosshair object to change its color
         crosshairImage = crosshair.GetComponent<Image>();
 
-        // Ensure crosshair is always visible and default color is set
         crosshair.SetActive(true);
         SetCrosshairColor(defaultCrosshairColor);
     }
@@ -36,6 +38,13 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleLooking();
         HandleInteraction();
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft <= 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
+        }
+        timeText.text = "Time: " + timeLeft.ToString("0.0");
     }
 
     void HandleMovement()
@@ -93,7 +102,6 @@ public class PlayerController : MonoBehaviour
     {
         string pickedItemName = item.itemName;
 
-        // Check if the item is on the grocery list
         if (gameManager.groceryList.Contains(pickedItemName))
         {
             gameManager.groceryList.Remove(pickedItemName);
@@ -103,10 +111,9 @@ public class PlayerController : MonoBehaviour
 
             foreach (string itemName in gameManager.groceryList)
             {
-                Debug.Log(itemName); // Print remaining items
+                Debug.Log(itemName); 
             }
 
-            // Update the UI to mark the item as collected
             foreach (Transform child in gameManager.groceryListPanel.transform)
             {
                 GroceryUI ui = child.GetComponent<GroceryUI>();
@@ -118,11 +125,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Destroy the item
         Destroy(item.gameObject);
 
-        // Check if all items are collected
-        CheckWinCondition();
+        gameManager.CheckWinCondition();
     }
 
 
@@ -133,13 +138,5 @@ public class PlayerController : MonoBehaviour
         {
             crosshairImage.sprite = newCrosshair;
         }
-    }
-
-    void CheckWinCondition()
-    {
-        if (gameManager.groceryList.Count == 0)
-        {
-            Debug.Log("You collected all the items! You win!");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Win");        }
     }
 }

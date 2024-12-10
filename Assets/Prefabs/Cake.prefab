@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4369289275013272633}
   m_Layer: 0
   m_Name: Cake
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cake
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 884458e8b8137f84ca71d853a706fe3b, type: 3}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2176666394556963783}
   m_Layer: 0
   m_Name: Donut_02
-  m_TagString: Untagged
+  m_TagString: GroceryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Pink Donut
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 98543dab5545c1148abf961759282c95, type: 3}

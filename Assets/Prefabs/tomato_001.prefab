@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tomato_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0fe214b4718d3fc41aa37c205ae164ec, type: 3}
+      propertyPath: m_TagString
+      value: GroceryItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fe214b4718d3fc41aa37c205ae164ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6726649243091522817}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fe214b4718d3fc41aa37c205ae164ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1726520020812564786}
   m_SourcePrefab: {fileID: 100100000, guid: 0fe214b4718d3fc41aa37c205ae164ec, type: 3}
 --- !u!1 &2247890650161004165 stripped
 GameObject:
@@ -86,4 +93,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Tomato
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 5847c28e7dd05a84993d6adf622e8488, type: 3}
+--- !u!65 &-1726520020812564786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247890650161004165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.079971895, y: 0.08873032, z: 0.07943539}
+  m_Center: {x: -0.0005882848, y: 0.044431217, z: 0.00048152544}

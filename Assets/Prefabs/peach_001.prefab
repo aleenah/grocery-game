@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: peach_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63e79004a1b1cbb4ca1a221e8c7d3694, type: 3}
+      propertyPath: m_TagString
+      value: GroceryItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63e79004a1b1cbb4ca1a221e8c7d3694, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6711866782450270357}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63e79004a1b1cbb4ca1a221e8c7d3694, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 962151484701124798}
   m_SourcePrefab: {fileID: 100100000, guid: 63e79004a1b1cbb4ca1a221e8c7d3694, type: 3}
 --- !u!1 &1785972770615978053 stripped
 GameObject:
@@ -86,4 +93,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Peach
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 314c7599928322d488b9d8b0d0dd464b, type: 3}
+--- !u!65 &962151484701124798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785972770615978053}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08874817, y: 0.050121013, z: 0.08572902}
+  m_Center: {x: -0.002203269, y: 0.02512685, z: -0.0019320231}
