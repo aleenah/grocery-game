@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
         }
     }
 

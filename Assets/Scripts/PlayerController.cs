@@ -21,9 +21,13 @@ public class PlayerController : MonoBehaviour
     public TMP_Text timeText;
     public float timeLeft = 120;
 
+    AudioSource src;
+    public AudioClip pickupItem;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        src = GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked; 
         Cursor.visible = false; 
         
@@ -105,6 +109,7 @@ public class PlayerController : MonoBehaviour
         if (gameManager.groceryList.Contains(pickedItemName))
         {
             gameManager.groceryList.Remove(pickedItemName);
+            src.PlayOneShot(pickupItem);
 
             Debug.Log($"Picked up item: {pickedItemName}");
             Debug.Log("Remaining items in grocery list:");
