@@ -118,5 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7fa28b7794f094ca5efb4849b97fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Donut
+  itemName: Chocolate Donut
   itemIcon: {fileID: 21300000, guid: 6cc1cb6b384e79145af93cf243d15dec, type: 3}
